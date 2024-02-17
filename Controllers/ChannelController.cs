@@ -1,3 +1,4 @@
+using System.Net.Http;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using TeamChat.Contracts.ChannelContact;
@@ -98,6 +99,26 @@ namespace TeamChat.Controller
             await _channelService.Remove(existingChannel);
 
             return NoContent();
+        }
+
+        [HttpPost("/token")]
+        public async Task<ActionResult<String>> GetTokenLiveKit(LiveKitRequest liveKitRequest)
+        {
+            var requestData = new Dictionary<string, string>
+            {
+                { "room", liveKitRequest.room },
+                { "user", liveKitRequest.user }
+            };
+            var content = new FormUrlEncodedContent(requestData);
+
+            HttpClient httpClient = new HttpClient();
+            string apiUrl = "http://localhost:8000/api/channels/token";
+
+            HttpResponseMessage response = await httpClient.PostAsync(apiUrl, content);
+
+            string responseData = await response.Content.ReadAsStringAsync();
+
+            return Ok(responseData);
         }
     }
 }

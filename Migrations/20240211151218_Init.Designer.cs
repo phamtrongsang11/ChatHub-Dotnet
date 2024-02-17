@@ -12,7 +12,7 @@ using TeamChat.Database;
 namespace TeamChat.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240202145802_Init")]
+    [Migration("20240211151218_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -224,8 +224,8 @@ namespace TeamChat.Migrations
                     b.HasData(
                         new
                         {
-                            id = "2649568d-136f-40d2-9f85-4884a9ac7a59",
-                            createdAt = new DateTime(2024, 2, 2, 14, 58, 0, 303, DateTimeKind.Utc).AddTicks(7930),
+                            id = "df4cc051-d0c4-4b4e-963a-5de8a79859ac",
+                            createdAt = new DateTime(2024, 2, 11, 15, 12, 17, 621, DateTimeKind.Utc).AddTicks(8028),
                             email = "john@gmail.com",
                             imageUrl = "my image url",
                             name = "John"

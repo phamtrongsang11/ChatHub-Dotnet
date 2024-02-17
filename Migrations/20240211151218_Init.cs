@@ -197,7 +197,7 @@ namespace TeamChat.Migrations
             migrationBuilder.InsertData(
                 table: "profiles",
                 columns: new[] { "id", "createdAt", "email", "imageUrl", "name", "updatedAt" },
-                values: new object[] { "2649568d-136f-40d2-9f85-4884a9ac7a59", new DateTime(2024, 2, 2, 14, 58, 0, 303, DateTimeKind.Utc).AddTicks(7930), "john@gmail.com", "my image url", "John", null });
+                values: new object[] { "df4cc051-d0c4-4b4e-963a-5de8a79859ac", new DateTime(2024, 2, 11, 15, 12, 17, 621, DateTimeKind.Utc).AddTicks(8028), "john@gmail.com", "my image url", "John", null });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Conversation_memberOneId",

@@ -109,3 +109,4 @@ C:\Users\phamt\Desktop\c#\TeamChat\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPat
 C:\Users\phamt\Desktop\c#\TeamChat\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\phamt\Desktop\c#\TeamChat\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\phamt\Desktop\c#\TeamChat\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\phamt\Desktop\c#\TeamChat\obj\Debug\net8.0\TeamChat.sourcelink.json
