@@ -18,13 +18,13 @@ namespace TeamChat.Repositories.UnitOfWork
         public UnitOfWork(ApplicationDbContext db)
         {
             _db = db;
-            serverRepository = new ServerRepository(_db);
-            profileRepository = new ProfileRepository(_db);
-            memberRepository = new MemberRepository(_db);
-            channelRepository = new ChannelRepository(_db);
-            messageRepository = new MessageRepository(_db);
-            conversationRepository = new ConversationRepository(_db);
-            directMessageRepository = new DirectMessageRepository(_db);
+            serverRepository = new ServerRepository(db);
+            profileRepository = new ProfileRepository(db);
+            memberRepository = new MemberRepository(db);
+            channelRepository = new ChannelRepository(db);
+            messageRepository = new MessageRepository(db);
+            conversationRepository = new ConversationRepository(db);
+            directMessageRepository = new DirectMessageRepository(db);
         }
 
         public Task<int> Save()

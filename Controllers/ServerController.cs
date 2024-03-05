@@ -1,4 +1,5 @@
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TeamChat.Contracts.MemberContract;
 using TeamChat.Contracts.ServerContract;
@@ -132,6 +133,9 @@ namespace TeamChat.Controller
             List<ServerRespone> serverRespone = foundServers
                 .Select(server => _mapper.Map<ServerRespone>(server))
                 .ToList();
+
+            var emailValue = HttpContext.Items["email"] as string;
+            Console.WriteLine($"This is email {emailValue}");
 
             return Ok(serverRespone);
         }

@@ -110,3 +110,11 @@ C:\Users\phamt\Desktop\c#\TeamChat\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.New
 C:\Users\phamt\Desktop\c#\TeamChat\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\phamt\Desktop\c#\TeamChat\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
 C:\Users\phamt\Desktop\c#\TeamChat\obj\Debug\net8.0\TeamChat.sourcelink.json
+C:\Users\phamt\Desktop\C#\TeamChat\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\phamt\Desktop\C#\TeamChat\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\phamt\Desktop\C#\TeamChat\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\phamt\Desktop\C#\TeamChat\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\phamt\Desktop\C#\TeamChat\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\phamt\Desktop\C#\TeamChat\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\phamt\Desktop\C#\TeamChat\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\phamt\Desktop\C#\TeamChat\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

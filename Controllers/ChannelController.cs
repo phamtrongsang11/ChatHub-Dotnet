@@ -1,4 +1,5 @@
 using System.Net.Http;
+using System.Net.Http.Headers;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using TeamChat.Contracts.ChannelContact;
@@ -101,20 +102,27 @@ namespace TeamChat.Controller
             return NoContent();
         }
 
-        [HttpPost("/token")]
-        public async Task<ActionResult<String>> GetTokenLiveKit(LiveKitRequest liveKitRequest)
+        [HttpGet("token")]
+        public async Task<ActionResult<String>> GetTokenLiveKit(
+            [FromQuery] string user,
+            [FromQuery] string room
+        )
         {
-            var requestData = new Dictionary<string, string>
-            {
-                { "room", liveKitRequest.room },
-                { "user", liveKitRequest.user }
-            };
-            var content = new FormUrlEncodedContent(requestData);
-
             HttpClient httpClient = new HttpClient();
-            string apiUrl = "http://localhost:8000/api/channels/token";
+            var accessToken = HttpContext.Items["token"] as string;
 
-            HttpResponseMessage response = await httpClient.PostAsync(apiUrl, content);
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(
+                "Bearer",
+                accessToken
+            );
+
+            string apiUrl =
+                "https://chatterbox-nestjs.onrender.com/livekit?identity="
+                + user
+                + "&chatId="
+                + room;
+
+            HttpResponseMessage response = await httpClient.GetAsync(apiUrl);
 
             string responseData = await response.Content.ReadAsStringAsync();
 

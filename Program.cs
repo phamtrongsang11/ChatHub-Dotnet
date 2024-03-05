@@ -1,6 +1,10 @@
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using TeamChat.Database;
 using TeamChat.Hubs;
+using TeamChat.MiddleWares;
 using TeamChat.Repositories.UnitOfWork;
 using TeamChat.Services.ChannelService;
 using TeamChat.Services.ConversationService;
@@ -67,6 +71,8 @@ app.UseRouting();
 app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
 app.MapControllers();
+
+app.UseMiddleware<JwtMiddleware>();
 
 app.UseEndpoints(endpoint => endpoint.MapHub<ChatMessageHub>("api/chat/message"));
 app.UseEndpoints(endpoint => endpoint.MapHub<ChatDirectMessageHub>("api/chat/directMessage"));
